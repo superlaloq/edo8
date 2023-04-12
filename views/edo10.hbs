@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Ingrese la URL</h2>
+        <input type="text" id="url" />
+        <select id="tipo">
+            <option value="Musica">Música</option>
+            <option value="Video">Video</option>
+            <option value="Documentos">Documentos</option>
+        </select>
+        <button onclick="agregar()">Agregar</button>
+    </div>
+    <div id="lista">
+        <h2>Lista de archivos</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Música</th>
+                    <th>Video</th>
+                    <th>Documentos</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        let urls = [];
+        const agregar = () => {
+            const url = document.getElementById('url').value;
+            const tipo = document.getElementById('tipo').value;
+            let fila = document.createElement('tr');
+            let celdaMusica = document.createElement('td');
+            let celdaVideo = document.createElement('td');
+            let celdaDocumentos = document.createElement('td');
+            if (tipo === "Musica") {
+                celdaMusica.innerHTML = `<a href="${url}" target="_blank">${url}</a>`;
+            } else if (tipo === "Video") {
+                celdaVideo.innerHTML = `<a href="${url}" target="_blank">${url}</a>`;
+            } else {
+                celdaDocumentos.innerHTML = `<a href="${url}" target="_blank">${url}</a>`;
+            }
+            fila.appendChild(celdaMusica);
+            fila.appendChild(celdaVideo);
+            fila.appendChild(celdaDocumentos);
+            document.querySelector('tbody').appendChild(fila);
+            urls.push({
+                url,
+                tipo
+            });
+            guardar(urls);
+            console.log(urls);
+        }
+
+        const guardar = (urls) => {
+            const data = {
+                musica: [], 
+                video: [], 
+                documentos: []
+            };
+            urls.forEach(url => {                if (url.tipo === 'Musica') {
+                    data.musica.push(url.url);
+                } else if (url.tipo === 'Video') {
+                    data.video.push(url.url);
+                } else {
+                    data.documentos.push(url.url);
+                }
+            });
+            const archivo = JSON.stringify(data);
+            console.log(urls);
+        }
+    </script>
+</body>
+</html>

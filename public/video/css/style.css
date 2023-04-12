@@ -1,0 +1,113 @@
+
+
+/*Pinta las esferas Esferas */
+body {
+    background-color: #11254a;
+  }
+  .esfera {
+    position: absolute;
+    width: 5.5cm;
+    height: 5.5cm;
+    border-radius: 50%;
+    background-color: #ff0000;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  .esfera2 {
+    position: absolute;
+    width: 4.5cm;
+    height: 4.5cm;
+    border-radius: 50%;
+    background-color: #ffff00;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  .esfera3 {
+    position: absolute;
+    width: 4.5cm;
+    height: 4.5cm;
+    border-radius: 50%;
+    background-color: #670b67;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+
+/*Estilos fondo*/
+  body { 
+    background-size: cover; 
+    min-width: 1024px; 
+    min-height: 756px; 
+ } 
+
+
+
+/*Estilos generales*/
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/*Estilos de la cabecera*/
+h2 {
+    font-size: 1.2rem;
+    background-color: #000;
+    color: #fff;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/*Estilos del input*/
+input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 30%;
+    margin-bottom: 0.5rem;
+}
+/*Estilos del select*/
+select {
+    width: 30%;
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/*Estilos del botón*/
+button {
+    background-color: #000;
+    color: #fff;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+/*Estilo del vídeo*/
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    border: 5px solid #000;
+    background-color: #008000;
+}
+
+/*Estilos de la tabla*/
+table {
+    font-size: 1rem;
+    width: 100%;
+    background-color: #000;
+    color: #008000;
+}
+
+/*Estilos de las celdas de la tabla*/
+th, td {
+    padding: 0.5rem;
+    border: 2px solid #008000;
+}
+
+/*Estilos de la cabecera de la tabla*/
+th {
+    background-color: #000;
+}
