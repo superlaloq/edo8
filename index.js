@@ -30,33 +30,33 @@ app.listen(3000);
 
 
   
-  var esfera1 = document.querySelector('#esfera1');
-  var esfera2 = document.querySelector('#esfera2');
-  var esfera3 = document.querySelector('#esfera3');
+ // var esfera1 = document.querySelector('#esfera1');
+ // var esfera2 = document.querySelector('#esfera2');
+ // var esfera3 = document.querySelector('#esfera3');
 
   // mover esferas por la pantalla
-  window.setInterval(function() {
-    esfera1.style.left = Math.random() * (window.innerWidth-200) + 'px';
-    esfera1.style.top = Math.random() * (window.innerHeight-200) + 'px';
+ // window.setInterval(function() {
+  //   esfera1.style.left = Math.random() * (window.innerWidth-200) + 'px';
+  //   esfera1.style.top = Math.random() * (window.innerHeight-200) + 'px';
 
-    esfera2.style.left = Math.random() * (window.innerWidth-100) + 'px';
-    esfera2.style.top = Math.random() *(window.innerHeight-100) + 'px';
+  //   esfera2.style.left = Math.random() * (window.innerWidth-100) + 'px';
+  //   esfera2.style.top = Math.random() *(window.innerHeight-100) + 'px';
 
-    esfera3.style.left = Math.random() * (window.innerWidth-150) + 'px';
-    esfera3.style.top = Math.random() * (window.innerHeight-150) + 'px';
-  }, 1000);
+  //   esfera3.style.left = Math.random() * (window.innerWidth-150) + 'px';
+  //   esfera3.style.top = Math.random() * (window.innerHeight-150) + 'px';
+  // }, 1000);
 
-  // agregar función al botón
-  esfera1.addEventListener('click', function() {
-    window.location.href = 'esferas1.hbs';
-  });
+  // // agregar función al botón
+  // esfera1.addEventListener('click', function() {
+  //   window.location.href = 'esferas1.hbs';
+  // });
 
-  esfera2.addEventListener('click', function() {
-    window.location.href = 'esferas2.hbs';
-  });
+  // esfera2.addEventListener('click', function() {
+  //   window.location.href = 'esferas2.hbs';
+  // });
 
-  esfera3.addEventListener('click', function() {
-    window.location.href = 'esferas3.hbs';
-  });
+  // esfera3.addEventListener('click', function() {
+  //   window.location.href = 'esferas3.hbs';
+  // });
   
 
